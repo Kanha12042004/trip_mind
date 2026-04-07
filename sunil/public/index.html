@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripmind ✈️ | Discover Your Next Adventure</title>
+    <meta name="description"
+        content="Plan your perfect trip with AI. Get personalized travel recommendations based on your budget, interests, and location.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="floating-circle circle-1"></div>
+        <div class="floating-circle circle-2"></div>
+        <div class="floating-circle circle-3"></div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+                <div class="logo">
+                <span class="logo-icon">✈️</span>
+                <span class="logo-text">Tripmind</span>
+            </div>
+            <p class="tagline">Discover your perfect destination with Tripmind</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Trip Planning Form -->
+            <section class="form-section glass-card">
+                <h2 class="section-title">
+                    <span class="title-icon">🗺️</span>
+                    Plan Your Adventure
+                </h2>
+
+                <form id="tripForm" class="trip-form">
+                    <!-- Location Input -->
+                    <div class="form-group">
+                        <label for="location" class="form-label">
+                            <span class="label-icon">📍</span>
+                            Destination
+                        </label>
+                        <div class="input-with-voice">
+                            <input type="text" id="location" name="location" class="form-input"
+                                placeholder="e.g., Goa, Paris, Tokyo, Bali" required>
+                            <button type="button" id="voiceBtn" class="voice-btn" aria-pressed="false" title="Use voice to enter destination">🎙️</button>
+                        </div>
+                    </div>
+
+                    <!-- Budget Selection -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span class="label-icon">💰</span>
+                            Budget Level
+                        </label>
+                        <div class="budget-options">
+                            <label class="budget-option">
+                                <input type="radio" name="budget" value="Budget-Friendly" required>
+                                <span class="budget-card">
+                                    <span class="budget-icon">🎒</span>
+                                    <span class="budget-text">Budget</span>
+                                    <span class="budget-desc">$50-100/day</span>
+                                </span>
+                            </label>
+                            <label class="budget-option">
+                                <input type="radio" name="budget" value="Moderate">
+                                <span class="budget-card">
+                                    <span class="budget-icon">🧳</span>
+                                    <span class="budget-text">Moderate</span>
+                                    <span class="budget-desc">$100-200/day</span>
+                                </span>
+                            </label>
+                            <label class="budget-option">
+                                <input type="radio" name="budget" value="Premium">
+                                <span class="budget-card">
+                                    <span class="budget-icon">💎</span>
+                                    <span class="budget-text">Premium</span>
+                                    <span class="budget-desc">$200-400/day</span>
+                                </span>
+                            </label>
+                            <label class="budget-option">
+                                <input type="radio" name="budget" value="Luxury">
+                                <span class="budget-card">
+                                    <span class="budget-icon">👑</span>
+                                    <span class="budget-text">Luxury</span>
+                                    <span class="budget-desc">$400+/day</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Trip Duration -->
+                    <div class="form-group">
+                        <label for="duration" class="form-label">
+                            <span class="label-icon">📅</span>
+                            Trip Duration
+                        </label>
+                        <select id="duration" name="duration" class="form-input form-select">
+                            <option value="Weekend (2-3 days)">Weekend (2-3 days)</option>
+                            <option value="Short Trip (4-5 days)">Short Trip (4-5 days)</option>
+                            <option value="Week Long (6-7 days)" selected>Week Long (6-7 days)</option>
+                            <option value="Extended (8-14 days)">Extended (8-14 days)</option>
+                            <option value="Long Vacation (15+ days)">Long Vacation (15+ days)</option>
+                        </select>
+                    </div>
+
+                    <!-- Interests -->
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span class="label-icon">💫</span>
+                            Your Interests (Select all that apply)
+                        </label>
+                        <div class="interests-grid">
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Adventure & Outdoors">
+                                <span class="tag-content">🏔️ Adventure</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Beach & Relaxation">
+                                <span class="tag-content">🏖️ Beach</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Culture & History">
+                                <span class="tag-content">🏛️ Culture</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Food & Culinary">
+                                <span class="tag-content">🍜 Food</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Nature & Wildlife">
+                                <span class="tag-content">🌿 Nature</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Nightlife & Entertainment">
+                                <span class="tag-content">🎉 Nightlife</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Shopping">
+                                <span class="tag-content">🛍️ Shopping</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Photography">
+                                <span class="tag-content">📸 Photography</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Spiritual & Wellness">
+                                <span class="tag-content">🧘 Wellness</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Sports & Activities">
+                                <span class="tag-content">⚽ Sports</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Art & Museums">
+                                <span class="tag-content">🎨 Art</span>
+                            </label>
+                            <label class="interest-tag">
+                                <input type="checkbox" name="interests" value="Romance & Honeymoon">
+                                <span class="tag-content">💕 Romance</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Find My Perfect Trip</span>
+                        <span class="btn-icon">✨</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Loading State -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="glass-card loading-card">
+                    <div class="loader">
+                        <div class="plane-loader">✈️</div>
+                    </div>
+                    <h3 class="loading-text">Planning Your Dream Trip...</h3>
+                    <p class="loading-subtext">Our AI is finding the best destinations for you</p>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="glass-card results-card">
+                    <div class="results-header">
+                        <h2 class="results-title">
+                            <span class="title-icon">🎯</span>
+                            Your Personalized Trip Plan
+                        </h2>
+                        <button class="new-search-btn" onclick="resetForm()">
+                            <span>🔄</span> New Search
+                        </button>
+                    </div>
+                    <div class="results-content" id="resultsContent">
+                        <!-- AI recommendations will be inserted here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="glass-card error-card">
+                    <div class="error-icon">😕</div>
+                    <h3 class="error-title">Oops! Something went wrong</h3>
+                    <p class="error-message" id="errorMessage"></p>
+                    <button class="retry-btn" onclick="resetForm()">Try Again</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by <strong>Sunil AI</strong> ✨</p>
+            <p class="footer-small">Plan smarter, travel better</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
